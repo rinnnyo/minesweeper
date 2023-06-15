@@ -1,4 +1,3 @@
-import { Main } from 'next/document';
 import styles from './index.module.css';
 
 const Home = () => {
@@ -6,11 +5,10 @@ const Home = () => {
     <div className={styles.container}>
       <main className={styles.main}>
         <div className={styles.hoge} />
-        </main>
-        <div></div>
-            </div>
-     
-  );
+      </main>
+      <div>a</div>
+    </div>
+  )
 };
 
 export default Home;
