@@ -17,6 +17,12 @@
   padding: 5rem 0;
 }
 
+.hoge {
+  width: 30px;
+  height: 30px;
+  background: url('~/assets/images/icons.png') no-repeat;
+}
+
 .footer {
   display: flex;
   align-items: center;
