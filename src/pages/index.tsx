@@ -6,7 +6,6 @@ const Home = () => {
       <main className={styles.main}>
         <div className={styles.hoge} />
       </main>
-      <div>aagaaa</div>
     </div>
   )
 };
