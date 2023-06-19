@@ -69,7 +69,7 @@ const Home = () => {
                 backgroundColor: type !== -1 ? 'grey' : 'lightgrey',
               }}
             >
-              {type !== 0 && <div className={styles.stone} />}
+              {/* {type !== 0 && <div className={styles.stone} />} */}
             </div>
           ))
         )}
