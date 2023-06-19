@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styles from './index.module.css';
-import { join } from 'path';
 
 const Home = () => {
   const normalBoard = [
