@@ -8,6 +8,15 @@
   padding: 0 0.5rem;
 }
 
+.board {
+  display: flex;
+  background-color: gray;
+  height: 270px;
+  width: 270px;
+  font-size: 0;
+  flex-wrap: wrap;
+}
+
 .main {
   display: flex;
   flex: 1;
@@ -17,10 +26,12 @@
   padding: 5rem 0;
 }
 
-.hoge {
+.cell {
   width: 30px;
   height: 30px;
   background: url('~/assets/images/icons.png') no-repeat;
+  background-position: 0;
+  background-color: lightgrey;
 }
 
 .footer {
