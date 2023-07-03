@@ -38,7 +38,7 @@ const Home = () => {
   const [userimput, setUserimput] = useState(normalBoard);
   const newBombMap: number[][] = JSON.parse(JSON.stringify(bombMap));
   const newUserimput = JSON.parse(JSON.stringify(userimput));
-  const setBombCount = () => newBombMap.flat().filter(Boolean).length;
+  const setBombCount = () => newBombMap.flat().filter(Boolean).length; //bombの数を数える
 
   const bombCount = (a: number, b: number) => {
     let bombCounter = 0;
@@ -54,12 +54,13 @@ const Home = () => {
   };
   const randam = (n: number) => Math.floor(Math.random() * n);
   const onClick = (x: number, y: number) => {
-    console.log(x, y);
+    
 
     if (bombMap[y][x] === 0) {
       newUserimput[y][x] = 1;
       setUserimput(newUserimput);
     }
+   
 
     while (setBombCount() < 10) {
       newBombMap[y][x] = 1;
@@ -67,8 +68,14 @@ const Home = () => {
       newBombMap[y][x] = 0;
     }
 
+   
+
+
     setBombMap(newBombMap);
+    console.log(userimput[y][x]);
   };
+
+ 
   const reBoard = (i: number, j: number) => {
     board[i][j] = bombCount(i, j);
     if (board[i][j] === 0) {
@@ -81,6 +88,7 @@ const Home = () => {
         }
       }
     }
+   
   };
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
@@ -89,6 +97,15 @@ const Home = () => {
       }
     }
   }
+ 
+  for (let c=0;c<9;c++){
+    for(let d=0;d<9;d++){
+      if (bombMap[c][d]===1&&bombMap[c][d]===userimput[c][d]){
+        board[c][d]=11
+        }
+    }
+  }
+  
 
   return (
     <div className={styles.container}>
